@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>vmware虚拟机配置ubantu20.04静态IP地址 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="vmware虚拟机配置ubantu20.04静态IP地址
+1. 修改 VMware虚拟网络编辑器
+打开vmware，点击顶部的“编辑”菜单，打开 ”虚拟化网络编辑器“ 。
+
+选中第三个选项 “VMn,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="vmware虚拟机配置ubantu20.04静态IP地址 - Hexo"/>
+    <meta name="twitter:description" content="vmware虚拟机配置ubantu20.04静态IP地址
+1. 修改 VMware虚拟网络编辑器
+打开vmware，点击顶部的“编辑”菜单，打开 ”虚拟化网络编辑器“ 。
+
+选中第三个选项 “VMn,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Hexo"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="vmware虚拟机配置ubantu20.04静态IP地址 - Hexo"/>
+    <meta property="og:description" content="vmware虚拟机配置ubantu20.04静态IP地址
+1. 修改 VMware虚拟网络编辑器
+打开vmware，点击顶部的“编辑”菜单，打开 ”虚拟化网络编辑器“ 。
+
+选中第三个选项 “VMn,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script>window.searchDbPath = "/search.xml";</script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">vmware虚拟机配置ubantu20.04静态IP地址</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">vmware虚拟机配置ubantu20.04静态IP地址</h1>
+        <div class="stuff">
+            <span>六月 05, 2022</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/ubantu/" rel="tag">ubantu</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="tag">环境配置</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <p>vmware虚拟机配置ubantu20.04静态IP地址</p>
+<p><strong>1. 修改 VMware虚拟网络编辑器</strong></p>
+<p>打开vmware，点击顶部的“编辑”菜单，打开 ”虚拟化网络编辑器“ 。</p>
+<p><img src="/img/pic/2.png"></p>
+<p>选中第三个选项 “VMnet8”</p>
+<p><img src="/img/pic/3.png"></p>
+<p> 把 “使用本地DHCP服务将 IP地址分配给虚拟机”  前面的勾去掉，目的是禁止动态给ubuntu虚拟机分配IP地址，其它地方不用修改。</p>
+<p><strong>2. 记录下VMware的网关IP地址</strong></p>
+<p>2.然后点击右边的“NAT设置(s) … ”按钮。</p>
+<p><img src="/img/pic/4.png"></p>
+<p>然后一定要把 “网关IP”里面的IP地址192.168.10.2（这个地方以你电脑上的vmware的网关ip地址为准）记录下来，在配置ubuntu网络服务的时候，网关要配到192.168.10.2（以你的wmware网关ip为准）这个IP地址。</p>
+<p><strong>3. VMware网络适配器设置（这一步很重要，不然配成静态 ip地址也不能上网）</strong></p>
+<p>依次进入 控制面板 &gt;&gt;  网络和 Internet &gt;&gt; 更改适配器设置，右键 VMware Network Adapter VMnet8</p>
+<p><img src="/img/pic/5.png"></p>
+<p>在VMware Network Adapter VMnet8图标上右键，选属性，然后选择“Internet协议版本4(TCP&#x2F;Ipv4)”选项，然后点击 “属性”按钮。</p>
+<p><img src="/img/pic/6.png"></p>
+<p>然后弹出属性框，可以看到 “使用下面的IP地址”下的IP地址中的内容，默认为192.168.10.2，这个ip需要更改。</p>
+<p>这个IP地址跟VMware虚拟机里的网关IP地址是相同的，产生冲突，所以ubuntu虚拟机在查找网关的时候会把vmware适配器当作网关，导致找不到真正的VMware虚拟机网关。</p>
+<p>所以要避开虚拟机网关IP</p>
+<p><img src="/img/pic/7.png"></p>
+<p>为了不跟ubuntu虚拟机配置的网关ip产生冲突，需要将这个IP地址改成别的IP地址，比如改成 192.168.10.1 或 192.168.10.3</p>
+<p> 将这个地方的IP地址改成 192.168.10.3或192.168.10.1，只要不是192.168.10.2就行，改后的效果如下图：</p>
+<p><img src="/img/pic/8.png"></p>
+<p> 然后其它地方不用更改，此步骤完成。</p>
+<p><strong>4. 设置ubuntu虚拟机网络适配器</strong></p>
+<p>打开VMware，在【<strong>我的计算机】</strong>　下选中要配置的ubuntu虚拟机，点击【<strong>编辑虚拟机设置】</strong>，在左侧的【<strong>硬件】</strong>栏中选中【<strong>网络适配器】</strong>，选中右侧　【<strong>网络连接】</strong>　中的【 <strong>自定义(U):特定虚拟网络 】</strong>选项，选中下面的 【<strong>VMnet8 (NAT模式)”】</strong>选项，点击【确定】按钮。</p>
+<p><img src="/img/pic/9.png"></p>
+<p><img src="/img/pic/10.png"></p>
+<p><strong>5. 网络配置文件设置</strong></p>
+<p>用ip addr命令查看网卡名称，下图可以看出，网卡名称是ens33，网卡名称以你自己的ubuntu系统为准，你的网卡名称可能不是ens33，有可能是ens37这种名称。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/pic/11.png"></p>
+<p> 修改网络配置文件,网络配置文件存放在&#x2F;etc&#x2F;netplan 目录下，</p>
+<p>用ls 命令查看配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /etc/netplan</span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/pic/12.png"></p>
+<p>从图上可以看出网络配置文件名为：01-network-manager-all.yaml</p>
+<p>用sudo gedit 命令打开 01-network-manager-all.yaml 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit /etc/netplan/01-network-manager-all.yaml </span><br></pre></td></tr></table></figure>
+
+<p>编辑 01-network-manager-all.yaml 文件的内容为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: NetworkManager</span><br><span class="line">  ethernets:</span><br><span class="line">    ens33:                      #网卡名，以ubuntu操作系统的网卡名称为准</span><br><span class="line">      dhcp4: no                 #ipv4关闭dhcp，用static模式</span><br><span class="line">      dhcp6: no                 #ip6关闭dhcp</span><br><span class="line">      addresses:</span><br><span class="line">        - 192.168.10.161/24     #本机IP地址</span><br><span class="line">      gateway4: 192.168.10.2    #vmware网关的的IP地址</span><br><span class="line">      nameservers:              #DNS服务器</span><br><span class="line">        addresses: [114.114.114.114, 8.8.8.8, 1.1.1.1]</span><br></pre></td></tr></table></figure>
+
+<p>然后执行 sudo netplan apply 命令编译网络配置，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netplan apply</span><br></pre></td></tr></table></figure>
+
+<p>此命令用来编译01-network-manager-all.yaml 文件，编译成功则无任何提示，编译失败会出现错误提示。</p>
+<p><strong>[注意]：</strong></p>
+<p>此配置文件内容为层级关系，分为5级，上级与下级的文本需要右缩进，右缩进至少一个空格，不允许使用tab，缩进的空格数不重要，只要相同层级的元素左对齐即可；大小写敏感；冒号与后面的值之间需要间隔一个空格，不然编译不过，会报错， 冒号后不带空格会出现下面的错误：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/netplan/01-network-manager-all.yaml:11:7: Invalid YAML: could not find expected &#x27;:&#x27;:</span><br><span class="line">nameservers:</span><br></pre></td></tr></table></figure>
+
+<p><strong>重启系统，验证网络是否通达</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<p>执行 reboot 命令重启系统才会生效。</p>
+<p>重启后用 ping 命令验证网络是否通达：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping www.baidu.com</span><br></pre></td></tr></table></figure>
+
+<p>搬运于：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yyee/p/12899953.html">vmware虚拟机配置ubuntu 18.04(20.04)静态IP地址 - 民工黑猫 - 博客园 (cnblogs.com)</a></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
