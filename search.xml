@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>欢迎来到何之源の小窝</title>
-    <url>/2022/06/05/hello-world/</url>
-    <content><![CDATA[<p><img src="/img/5.jpg"></p>
-<p>只要记住你的名字，不管你在世界的哪个地方。我一定会，去见你。</p>
-<p>也许我会忘记你的名字，但是我一辈子都会记得喜欢你的感觉。</p>
-]]></content>
-      <categories>
-        <category>Welcome</category>
-      </categories>
-      <tags>
-        <tag>Welcome</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vmware虚拟机配置ubantu20.04静态IP地址</title>
     <url>/2022/06/05/1a/</url>
     <content><![CDATA[<p>vmware虚拟机配置ubantu20.04静态IP地址</p>
@@ -86,6 +72,21 @@
         <tag>linux</tag>
         <tag>ubantu</tag>
         <tag>环境配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>欢迎来到何之源の小窝</title>
+    <url>/2022/06/05/hello-world/</url>
+    <content><![CDATA[<p><img src="/img/5.jpg"></p>
+<p>只要记住你的名字，不管你在世界的哪个地方。我一定会，去见你。</p>
+<p>也许我会忘记你的名字，但是我一辈子都会记得喜欢你的感觉。</p>
+<p>测试</p>
+]]></content>
+      <categories>
+        <category>Welcome</category>
+      </categories>
+      <tags>
+        <tag>Welcome</tag>
       </tags>
   </entry>
 </search>
