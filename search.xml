@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>欢迎来到何之源の小窝</title>
-    <url>/2022/06/05/hello-world/</url>
-    <content><![CDATA[<p>只要记住你的名字，不管你在世界的哪个地方。我一定会，去见你。</p>
-<p><img src="/img/3.jpg"></p>
-<p>qq: 2398437254</p>
-<p>qq群：</p>
-<p><img src="/img/pic/1.jpg"></p>
-]]></content>
-      <categories>
-        <category>Welcome</category>
-      </categories>
-      <tags>
-        <tag>Welcome</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vmware虚拟机配置ubantu20.04静态IP地址</title>
     <url>/2022/06/05/1a/</url>
     <content><![CDATA[<p>vmware虚拟机配置ubantu20.04静态IP地址</p>
@@ -88,6 +72,22 @@
         <tag>linux</tag>
         <tag>ubantu</tag>
         <tag>环境配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>欢迎来到何之源の小窝</title>
+    <url>/2022/06/05/hello-world/</url>
+    <content><![CDATA[<p>只要记住你的名字，不管你在世界的哪个地方。我一定会，去见你。</p>
+<p><img src="/img/3.jpg"></p>
+<p>qq: 2398437254</p>
+<p>qq群：</p>
+<p><img src="/img/pic/1.jpg"></p>
+]]></content>
+      <categories>
+        <category>Welcome</category>
+      </categories>
+      <tags>
+        <tag>Welcome</tag>
       </tags>
   </entry>
 </search>
